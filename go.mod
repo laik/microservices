@@ -19,3 +19,5 @@ require (
 	github.com/satori/go.uuid v1.2.1-0.20181028125025-b2ce2384e17b
 	github.com/uber/jaeger-client-go v2.17.0+incompatible
 )
+
+replace github.com/gogo/protobuf => github.com/gogo/protobuf v1.3.1

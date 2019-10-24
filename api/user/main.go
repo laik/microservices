@@ -13,12 +13,12 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/micro/cli"
-	"github.com/micro/go-micro/service/grpc"
-	"github.com/micro/go-micro/util/log"
 	micro "github.com/micro/go-micro"
 	"github.com/micro/go-micro/client"
-	hystrixplugin "github.com/micro/go-plugins/wrapper/breaker/hystrix"
+	"github.com/micro/go-micro/service/grpc"
+	"github.com/micro/go-micro/util/log"
 	web "github.com/micro/go-micro/web"
+	hystrixplugin "github.com/micro/go-plugins/wrapper/breaker/hystrix"
 	opentracing "github.com/opentracing/opentracing-go"
 )
 
@@ -58,6 +58,7 @@ func main() {
 
 	hystrix.DefaultTimeout = 5000
 
+	// 初始化
 	sClient := hystrixplugin.NewClientWrapper()(service.Options().Service.Client())
 	sClient.Init(
 		// client.WrapCall(ocplugin.NewCallWrapper(t)),

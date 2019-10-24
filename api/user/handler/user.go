@@ -12,9 +12,9 @@ import (
 	userS "github.com/Allenxuxu/microservices/srv/user/proto/user"
 
 	"github.com/gin-gonic/gin"
-	"github.com/micro/go-micro/util/log"
 	micro "github.com/micro/go-micro"
 	"github.com/micro/go-micro/client"
+	"github.com/micro/go-micro/util/log"
 )
 
 // UserAPIService 服务
