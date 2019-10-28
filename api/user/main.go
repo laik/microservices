@@ -72,6 +72,8 @@ func main() {
 	pub := micro.NewPublisher("/test", sClient)
 
 	apiService := handler.New(sClient, pub, token)
+
+	
 	router := gin.Default()
 	r := router.Group("/user")
 	r.Use(gin2micro.TracerWrapper)
